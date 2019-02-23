@@ -1,13 +1,11 @@
-import React from 'react'
+import React from 'react';
+import { List } from './../../List';
+import { Record } from './../record';
 
 import { Heading, Content } from './styled'
 
 
 class PageTemplate extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     return (
       <div>
@@ -15,7 +13,9 @@ class PageTemplate extends React.Component {
           { this.props.title } 
         </Heading>
         <Content>
-          { this.props.content }
+          <List>
+            <Record></Record>
+          </List>
         </Content>
       </div>
       

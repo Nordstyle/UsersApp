@@ -1,4 +1,4 @@
-import { FETCH_OVERFLOW_USERDATA, FETCHING_OVERFLOW_USERDATA } from './constants';
+import { FETCH_OVERFLOW_USERDATA, FETCHING_OVERFLOW_USERDATA } from './../constants';
 
 export const usersOverflowData = (state = { isLoading: false, data: [] }, action) => {
   switch (action.type) {
