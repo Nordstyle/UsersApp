@@ -10,7 +10,6 @@ import '../styles/App.css'
 
 const Wrapper = styled.div`
     max-width: 120rem;
-    heihgt: 100vh;
     margin: 0 auto;
     padding-left: 0.6rem;
     padding-right: 0.6rem;
