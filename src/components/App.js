@@ -2,6 +2,7 @@ import React, { Component } from "react"
 import { Route, Link } from 'react-router-dom'
 import styled from 'styled-components'
 
+// import main from './pages/main'
 import sf from './pages/stackoverflow'
 import gh from './pages/github'
 
@@ -25,18 +26,11 @@ const Header = styled.nav`
     margin-bottom: 2rem;
 `;
 
-const LinkContainer = styled.li`
-    position: relative;
+const RouteLink = styled(Link)`
     padding: 1rem 2.4rem;
     margin: 0 1rem;
     font-family: 'Pacifico', cursive;
     font-size: 2rem;
-    color: #FFF;
-    text-decoration: none;	
-    list-style-type: none;
-`;
-
-const RouteLink = styled(Link)`
     color: #24292e;
     transition: 0.3s;
     &:hover {
@@ -48,12 +42,8 @@ class App extends Component {
         return (
             <Wrapper>
                 <Header>
-                    <LinkContainer>
-                        <RouteLink to="/">StackOverflow</RouteLink>
-                    </LinkContainer>
-                    <LinkContainer>
-                        <RouteLink to="/gh">Github</RouteLink>
-                    </LinkContainer>
+                    <RouteLink to="/">StackOverflow</RouteLink>
+                    <RouteLink to="/gh">Github</RouteLink>
                 </Header>
 
                 <main>
