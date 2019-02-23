@@ -1,19 +1,15 @@
 import React from 'react'
-import { getUsers } from '../../../api'
+import { connect } from 'react-redux';
 
+import { fetchUserOverflowData } from '../../../store/actions';
 import PageTemplate from '../../templates/page'
 
-class sf extends React.Component {
+class SF extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      posts: [],
-      modalIsOpen: false,
-      isLoading: true,
-      hasErrored: false,
       selectedId: null
     };
-    this.getData = this.getData.bind(this);
   }
 
   componentDidMount() {
@@ -22,15 +18,12 @@ class sf extends React.Component {
   }
   
   getData() {
-    this.setState({ isLoading: false });
-
-    getUsers()
-      .then(posts => this.setState({ posts }))
+    this.props.fetchUserOverflowData();
   }
 
   render() {
-    if (this.state.hasErrored) return <PageTemplate title="Erorr, come to us later" />
-    if (this.state.isLoading) return <PageTemplate title="Loading..." />
+    if (this.props.hasErrored) return <PageTemplate title="Erorr, come to us later" />
+    if (this.props.isLoading) return <PageTemplate title="Loading..." />
 
     return (
       <PageTemplate title="StackOverflow" content="text" />
@@ -38,4 +31,7 @@ class sf extends React.Component {
   }
 }
 
-export default sf
+export default connect(
+  store => ({ isLoading: store.usersOverflowData.isLoading, data: store.usersOverflowData.data }),
+  { fetchUserOverflowData }
+)(SF)

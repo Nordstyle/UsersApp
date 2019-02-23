@@ -6,7 +6,9 @@ import store from './store'
 
 import App from './components/App'
 
-const target = document.querySelector('#root')
+const target = document.querySelector('#root');
+
+window.store = store;
 
 render(
   <Provider store={store}>

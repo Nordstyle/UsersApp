@@ -37,22 +37,19 @@ const RouteLink = styled(Link)`
         text-shadow: 0px -1px #F48024;
     }
 `;
-class App extends Component {
-    render() {
-        return (
-            <Wrapper>
-                <Header>
-                    <RouteLink to="/">StackOverflow</RouteLink>
-                    <RouteLink to="/gh">Github</RouteLink>
-                </Header>
-
-                <main>
-                    <Route exact path="/" component={sf} />
-                    <Route path="/gh" component={gh} />
-                </main>
-            </Wrapper>
-        );
-    }
+const App = () => {
+    return (
+        <Wrapper>
+            <Header>
+                <RouteLink to="/">StackOverflow</RouteLink>
+                <RouteLink to="/gh">Github</RouteLink>
+            </Header>
+            <main>
+                <Route exact path="/" component={sf} />
+                <Route path="/gh" component={gh} />
+            </main>
+        </Wrapper>
+    ); 
 }
 
 export default App
