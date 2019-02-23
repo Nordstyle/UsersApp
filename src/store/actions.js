@@ -1,12 +1,12 @@
-import { FETCH_USER_DATA } from './constants';
+import { FETCH_OVERFLOW_USERDATA, FETCHING_OVERFLOW_USERDATA } from './constants';
+import { getStackoverflowHotPosts } from './../api';
 
-export const fetchUserData = () => ({
-  type: FETCH_USER_DATA,
-  payload: {
-    name: 'Anatoliy',
-    surname: 'Zolotukhin',
-    city: 'Novosibirsk',
-    country: 'Russia',
-    position: 'Front-end developer'
-  }
-});
+export const fetchUserOverflowData = () => dispatch => {
+  dispatch({ type: FETCHING_OVERFLOW_USERDATA });
+  getStackoverflowHotPosts().then(data => {
+    if (data.error) {
+      return console.log('Error')
+    }
+    dispatch({ type: FETCH_OVERFLOW_USERDATA, payload: data })
+  })
+};
