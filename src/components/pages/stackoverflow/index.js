@@ -1,10 +1,9 @@
 import React from 'react'
 
+import PageTemplate from '../../templates/page'
+
 const sf = () => (
-  <div>
-    <h1>stack overflow</h1>
-    <p>hi, are u from sf?</p>
-  </div>
+  <PageTemplate title="StackOverflow" content="text" />
 )
 
 export default sf

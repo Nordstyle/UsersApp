@@ -1,10 +1,9 @@
 import React from 'react'
 
+import PageTemplate from '../../templates/page'
+
 const gh = () => (
-  <div>
-    <h1>github</h1>
-    <p>hi, are u from gh?</p>
-  </div>
+  <PageTemplate title="Github" content="text" />
 )
 
 export default gh

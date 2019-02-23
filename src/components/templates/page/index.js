@@ -1,21 +1,26 @@
 import React from 'react'
 
-import { Heading } from './styled'
+import { Heading, Content } from './styled'
 
 
-class Page extends React.Component {
+class PageTemplate extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      title: 'Страница'
-    };
   }
 
   render() {
     return (
-      <Heading> { this.state.title } </Heading>
+      <div>
+        <Heading> 
+          { this.props.title } 
+        </Heading>
+        <Content>
+          { this.props.content }
+        </Content>
+      </div>
+      
     );
   }
 }
 
-export default page
+export default PageTemplate
