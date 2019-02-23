@@ -14,7 +14,9 @@ class PageTemplate extends React.Component {
         </Heading>
         <Content>
           <List>
-            <Record></Record>
+            { 
+              this.props.data && this.props.data.items && this.props.data.items.map(item => <Record key={ item.question_id } {...item} />)
+            }
           </List>
         </Content>
       </div>

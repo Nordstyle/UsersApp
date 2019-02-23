@@ -1,18 +1,18 @@
 import React from 'react';
-import { Author, Avatar, Name } from './styled'; 
+import { Item, Author, Avatar, Name, Title } from './styled'; 
 
 export const Record = (props) => {
   const { title, owner: { display_name: name, profile_image: image }} = props;
   return(
-    <tr>
-      <td>
+    <Item>
+      <Title>
         { title }
-      </td>
+      </Title>
       <Author>
         <Avatar src={ image } />
         <Name> { name } </Name>
       </Author>
-    </tr>
+    </Item>
   );
 };
 

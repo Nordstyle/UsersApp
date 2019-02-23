@@ -23,10 +23,10 @@ class SF extends React.Component {
 
   render() {
     if (this.props.hasErrored) return <PageTemplate title="Erorr, come to us later" />
-    if (this.props.isLoading) return <PageTemplate title="Loading..." />
+    if (this.props.isLoading) return <div> Loading ... </div>
 
     return (
-      <PageTemplate title="StackOverflow" content="text" />
+      <PageTemplate title="StackOverflow" data={ this.props.data } />
     );
   }
 }

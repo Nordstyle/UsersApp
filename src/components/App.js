@@ -3,8 +3,8 @@ import { Route, Link } from 'react-router-dom'
 import styled from 'styled-components'
 
 // import main from './pages/main'
-import sf from './pages/stackoverflow'
-import gh from './pages/github'
+import SF from './pages/stackoverflow'
+import GH from './pages/github'
 
 import '../styles/App.css'
 
@@ -45,8 +45,8 @@ const App = () => {
                 <RouteLink to="/gh">Github</RouteLink>
             </Header>
             <main>
-                <Route exact path="/" component={sf} />
-                <Route path="/gh" component={gh} />
+                <Route exact path="/" component={ SF } />
+                <Route path="/gh" component={ GH } />
             </main>
         </Wrapper>
     ); 

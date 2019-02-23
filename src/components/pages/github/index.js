@@ -2,8 +2,8 @@ import React from 'react'
 
 import PageTemplate from '../../templates/page'
 
-const gh = () => (
+const GH = () => (
   <PageTemplate title="Github" content="text" />
 )
 
-export default gh
+export default GH
