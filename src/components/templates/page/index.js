@@ -2,20 +2,21 @@ import React from 'react';
 import { List } from './../../List';
 import { Record } from './../record';
 
-import { Heading, Content } from './styled'
+import { Heading, Content } from './styled';
 
 
 class PageTemplate extends React.Component {
   render() {
+    const { title, data } = this.props;
     return (
       <div>
         <Heading> 
-          { this.props.title } 
+          { title } 
         </Heading>
         <Content>
           <List>
             { 
-              this.props.data && this.props.data.items && this.props.data.items.map(item => <Record key={ item.question_id } {...item} />)
+              data && data.items && data.items.map(item => <Record key={ item.question_id } {...item} />)
             }
           </List>
         </Content>
