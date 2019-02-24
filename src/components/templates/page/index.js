@@ -1,6 +1,7 @@
 import React from 'react';
-import { List } from './../../List';
+import { List } from './../../list';
 import { Record } from './../record';
+import { Modal } from './../../modal';
 
 import { Heading, Content } from './styled';
 
@@ -20,8 +21,8 @@ class PageTemplate extends React.Component {
             }
           </List>
         </Content>
-      </div>
-      
+        <Modal isVisible={false}/>
+      </div>      
     );
   }
 }

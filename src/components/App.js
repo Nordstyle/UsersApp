@@ -13,11 +13,11 @@ const App = () => {
     return (
         <Wrapper>
             <Header>
-                <RouteLink to="/sf">StackOverflow</RouteLink>
+                <RouteLink to="/">StackOverflow</RouteLink>
                 <RouteLink to="/gh">Github</RouteLink>
             </Header>
             <main>
-                <Route exact path="/sf" component={ SF } />
+                <Route exact path="/" component={ SF } />
                 <Route path="/gh" component={ GH } />
             </main>
         </Wrapper>
