@@ -22,8 +22,7 @@ class SF extends React.Component {
   }
 
   render() {
-    console.log(this.props)
-    if (this.props.data.error_message) return <PageTemplate title={ this.props.data.error_message } />
+    if (this.props.isError) return <PageTemplate title={`${this.props.data.message}  ${this.props.data.stack}`} />
     if (this.props.isLoading) return <PageTemplate title="Loading..." />
 
     return (
@@ -33,6 +32,6 @@ class SF extends React.Component {
 };
 
 export default connect(
-  store => ({ isLoading: store.usersOverflowData.isLoading, data: store.usersOverflowData.data }),
+  store => ({ isLoading: store.usersOverflowData.isLoading, isError: store.usersOverflowData.isError, data: store.usersOverflowData.data }),
   { fetchUserOverflowData }
 )(SF);
