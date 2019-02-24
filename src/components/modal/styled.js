@@ -42,6 +42,7 @@ export const Button = styled.a`
   font-family: Roboto;
   font-size: 1.2rem;
   color: #fff;
+  cursor: pointer;
   border: 2px solid white;
   background: transparent; 
   transition: 0.3s;

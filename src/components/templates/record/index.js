@@ -34,10 +34,10 @@ class Record extends React.Component {
   }
 
   render() {
-    const { title, userAvatar, userName  } = this.props;
+    const { title, userAvatar, userName, link  } = this.props;
 
     return(
-      <Item onClick={ e => this.handleClick({ title, userAvatar, userName }) }>
+      <Item onClick={ e => this.handleClick({ title, userAvatar, userName, link }) }>
         <Title>
           { title }
         </Title>
