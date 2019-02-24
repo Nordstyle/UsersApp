@@ -1,9 +1,13 @@
-import React from 'react'
+import React from 'react';
+import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
 
-import PageTemplate from '../../templates/page'
+const Main = (props) => (
+  <div>
+    Detail page
+  </div>
+);
 
-const Main = () => (
-  <PageTemplate title="detail"/>
-)
-
-export default Main
+export default withRouter(connect(
+  store => ({ data: store.dataRow })
+)(Main));

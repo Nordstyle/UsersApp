@@ -9,7 +9,7 @@ export const Modal = (props) => {
   return ReactDOM.createPortal(
     <Wrapper>
       <Block>
-        <Close>X</Close>
+        <Close onClick={ onCancel }>X</Close>
         <Title> Go to the specified entry? </Title>
         <Choose>
           <Button positive onClick={ onConfirm }> Yes </Button>

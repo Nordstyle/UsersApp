@@ -1,8 +1,8 @@
 import { ADD_CURRENT_RECORD } from './../constants';
 
-export const getDataRow = (state = {data: {}}, action) => {
+export const dataRow = (state = {}, action) => {
   switch (action.type) {
-    case ADD_CURRENT_RECORD: return ({ data: action.payload });
+    case ADD_CURRENT_RECORD: return action.payload;
     default: return state;
   }
 };

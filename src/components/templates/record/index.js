@@ -35,7 +35,6 @@ class Record extends React.Component {
 
   render() {
     const { title, userAvatar, userName  } = this.props;
-    console.log(this.state.modalIsOpen)
 
     return(
       <Item onClick={ e => this.handleClick({ title, userAvatar, userName }) }>
