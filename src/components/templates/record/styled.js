@@ -20,5 +20,6 @@ export const Title = styled.td`
 
 export const Item = styled.tr`
   border: 1px solid #24292e;
+  cursor: pointer;
 `;
 

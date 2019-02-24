@@ -9,7 +9,7 @@ export const normalizeStackoverflowData = data =>
     link: item.link
   }));
 
-  export const normalizeGithubData = data => 
+export const normalizeGithubData = data => 
   data.map(item => ({
     type: 'github',
     userId: item.id,

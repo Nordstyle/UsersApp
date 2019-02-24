@@ -1,2 +1,1 @@
-"# Simple react app" 
-"# simple react app" 
+"# Simple react app"
