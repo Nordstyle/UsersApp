@@ -16,6 +16,9 @@ const AuthorCol = styled.th`
 `;
 
 export const List = ({ children }) => {
+  if (!children) {
+    return null
+  }
   return (
     <Table>
       <thead>
@@ -25,7 +28,7 @@ export const List = ({ children }) => {
         </tr>
       </thead>
       <tbody>
-        { children }
+        { children  }
       </tbody>
     </Table>
   );

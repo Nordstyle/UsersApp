@@ -22,7 +22,8 @@ class SF extends React.Component {
   }
 
   render() {
-    if (this.props.hasErrored) return <PageTemplate title="Erorr, come to us later" />
+    console.log(this.props)
+    if (this.props.data.error_message) return <PageTemplate title={ this.props.data.error_message } />
     if (this.props.isLoading) return <PageTemplate title="Loading..." />
 
     return (
