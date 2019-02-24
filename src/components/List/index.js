@@ -19,6 +19,7 @@ export const List = ({ children }) => {
   if (!children) {
     return null
   }
+  
   return (
     <Table>
       <thead>

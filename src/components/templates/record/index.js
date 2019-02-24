@@ -2,15 +2,15 @@ import React from 'react';
 import { Item, Author, Avatar, Name, Title } from './styled'; 
 
 export const Record = (props) => {
-  const { title, owner: { display_name: name, profile_image: image }} = props;
+  const { title, userAvatar, userName  } = props;
   return(
     <Item>
       <Title>
         { title }
       </Title>
       <Author>
-        <Avatar src={ image } />
-        <Name> { name } </Name>
+        <Avatar src={ userAvatar } />
+        <Name> { userName } </Name>
       </Author>
     </Item>
   );

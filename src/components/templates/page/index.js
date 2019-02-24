@@ -8,7 +8,7 @@ import { Heading, Content } from './styled';
 
 class PageTemplate extends React.Component {
   render() {
-    const { title, data } = this.props;
+    const { title, data, userId } = this.props;
     return (
       <div>
         <Heading> 
@@ -17,7 +17,7 @@ class PageTemplate extends React.Component {
         <Content>
           <List>
             { 
-              data && data.items && data.items.map(item => <Record key={ item.question_id } {...item} />)
+              data && data.map(item => <Record key={ item.userId } {...item} />)
             }
           </List>
         </Content>

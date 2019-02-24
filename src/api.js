@@ -1,4 +1,4 @@
-import { normalizeStackoverflowData } from './utils'
+import { normalizeStackoverflowData, normalizeGithubData } from './utils'
 
 const getJSON = (url) => fetch(url)
   .then(resp => {
@@ -10,4 +10,5 @@ const getJSON = (url) => fetch(url)
 export const getStackoverflowHotPosts = () => getJSON('https://api.stackexchange.com/2.2/questions?order=desc&sort=activity&site=stackoverflow&tab=hot')
   .then(normalizeStackoverflowData);
 
-export const getGithubRepos = () => getJSON('https://api.github.com/repositories');
+export const getGithubRepos = () => getJSON('https://api.github.com/repositories')
+  .then(normalizeGithubData);

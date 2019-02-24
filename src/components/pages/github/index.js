@@ -19,7 +19,6 @@ class GH extends React.Component {
   }
 
   render() {
-    console.log(this.props)
     if (this.props.isError) return <PageTemplate title={`${this.props.data.message}  ${this.props.data.stack}`} />
     if (this.props.isLoading) return <PageTemplate title="Loading..." />
 
